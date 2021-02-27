@@ -46,7 +46,7 @@ additional_links:
 
 # About Section
 # about_title: About Me
-about_profile_image: images/profile.jpg
+about_profile_image: images/my_face.jpg
 about_content: | # this will include new lines to allow paragraphs
   An architect of Container and Secret Management Platforms used to Accelerate Digital Transformation within FTSE 100 & 500 Organisations.
 
