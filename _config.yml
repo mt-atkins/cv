@@ -33,12 +33,26 @@ about:
   content: >
     An architect of Container and Secret Management Platforms with extensive experience in accelerating digital transformation within major organizations. Expertise in Docker, Kubernetes, Rancher, and DevOps practices, aiming to industrialize software delivery pipelines efficiently.
 
-skills:
-  - Docker Certified Associate
-  - Docker Authorized Trainer
-  - Docker MTA Certified
-  - HashiCorp Vault
-  - HashiCorp Terraform
+# Technical Skills
+technical_skills:
+  - category: Cloud Computing
+    skills: Proficient in AWS, Azure, and Google Cloud Platform
+  - category: DevOps & CI/CD
+    skills: Expertise in Jenkins, GitLab CI, and GitHub Actions
+  - category: Infrastructure as Code
+    skills: Advanced knowledge in HashiCorp Terraform
+  - category: Configuration Management
+    skills: Experienced with Ansible, Chef, and Puppet
+  - category: Security & Compliance
+    skills: Expert in security practices and HashiCorp Vault
+  - category: Monitoring & Operations
+    skills: Skilled in Prometheus, Grafana, and ELK Stack
+  - category: Scripting & Automation
+    skills: Proficient in Bash, Python, and PowerShell
+  - category: Microservices Architecture
+    skills: Knowledgeable in Docker and Kubernetes
+  - category: Linux System Administration
+    skills: Strong foundation in Linux administration
 
 # Professional Experience
 experience:
@@ -47,12 +61,19 @@ experience:
     duration: July 2021 - December 2022
     description: >
       Leading cloud-native security solutions, focusing on application protection across the entire lifecycle. Contributed to securing supply chains, cloud infrastructure, and running workloads in diverse environments.
-
   - title: Global Logic Consulting
     role: Delivery Consultant
     duration: July 2016 - July 2021
     description: >
       A digital product engineering company integrating experience design with complex engineering, facilitating clients' transition into digital businesses.
+
+  - title: QA Consulting
+    link: qa.com
+    # link_text: boringcompany.com
+    sub_title: DevOps Consultants
+    caption: July 2015 - July 2016
+    description: | # this will include new lines to allow paragraphs
+       The QA Consulting (incorporating NETbuilder Academy) is a leading provider of Consulting Services to world leading commercial and financial institutions, as well as some of the UK’s largest Government departments.
 
 # Education Background
 education:
