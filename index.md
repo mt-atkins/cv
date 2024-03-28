@@ -9,8 +9,3 @@
 layout: default
 
 
----
-
-Here are my skills:
-
-{% include skills-grid.html %}
