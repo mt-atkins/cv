@@ -1,0 +1,16 @@
+- name: Cloud Computing
+  description: Proficient in AWS, Azure, and Google Cloud Platform.
+  icon: fa-cloud
+- name: DevOps & CI/CD
+  description: Expertise in Jenkins, GitLab CI, and GitHub Actions.
+  icon: fa-cogs
+- name: Docker
+  description: Containerization with Docker.
+  icon: docker-icon.png
+- name: Kubernetes
+  description: Orchestration with Kubernetes.
+  icon: kubernetes-icon.png
+- name: Terraform
+  description: Infrastructure as Code with Terraform.
+  icon: terraform-icon.png
+# Add more skills as needed

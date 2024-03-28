@@ -1,0 +1,10 @@
+<div class="skills-grid">
+    {% for skill in site.data.skills %}
+      <div class="skill-card">
+        <img src="{{ site.baseurl }}/assets/icons/{{ skill.icon }}" alt="{{ skill.name }} icon">
+        <h3>{{ skill.name }}</h3>
+        <p>{{ skill.description }}</p>
+      </div>
+    {% endfor %}
+  </div>
+  
