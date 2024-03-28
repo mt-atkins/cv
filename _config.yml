@@ -7,15 +7,14 @@ version: 2
 
 # Personal info
 name: Morgan Thomas Atkins
-title: Senior Software Engineer
-email: morgantatkins@hotmail.com
+title: Cloud Engineering Evangelist
+email: morgan.atkins@mea-tech.co.uk
 website: mea-tech.co.uk
 
 # Dark Mode (true/false/never)
 darkmode: true
 
 # Social links
-twitter_username: morgantatkins
 github_username: morgantatkins
 instagram_username: morgantatkins
 linkedin_username: morgantatkins
@@ -28,32 +27,25 @@ additional_links:
     url: https://www.itsgoingto.be
 
 # About Section
-about_profile_image: images/my_face.jpg
+about_profile_image: images/IMG_6274.png
 about_content: |
-  An architect of Container and Secret Management Platforms used to Accelerate Digital Transformation within FTSE 100 & 500 Organisations. Container expertise includes Docker, Kubernetes, Rancher. Complementing my Container experience, I also have extensive 'DevOps', Continuous Integration, and Continuous Delivery experience after working with dozens of organisations to jump-start, accelerate, and industrialise Software Delivery Pipelines. I am most skilled in: Docker Certified Associate | Docker Authorised Trainer | Docker MTA Certified | Hashicorp Vault | Hashicorp Terraform.
+    Hello, I'm Morgan Thomas Atkins, a dedicated Cloud Engineering Evangelist with a deep-seated passion for guiding enterprises through their digital transformation journeys. My expertise lies at the intersection of cloud computing, containerization, and DevOps practices, where I excel in architecting Container and Secret Management Platforms that propel organizations into the future.
+
+    Certified in Docker and with extensive experience in Kubernetes and Rancher, I have a proven track record of designing and deploying scalable, secure, and resilient infrastructure solutions that streamline operations and foster innovation. My skills with HashiCorp Vault and Terraform further empower me to ensure that these solutions are not only efficient but also secure and compliant with the highest industry standards.
+    
+    My role goes beyond the technical; as an evangelist, I thrive on sharing knowledge, best practices, and the transformative potential of cloud engineering. Through workshops, seminars, and one-on-one mentoring, I've inspired teams and organizations to embrace cloud technologies, thereby accelerating their digital transformation initiatives.
+    
+    I believe in the power of collaboration and the importance of fostering a culture where continuous learning, innovation, and improvement are part of the daily routine. By bridging the gap between technical possibilities and business objectives, I help organizations leverage cloud technology to achieve their strategic goals.
+    
+    My commitment to the cloud engineering community is driven by a desire to see others succeed. Whether it's through leading edge solutions, thought leadership, or hands-on guidance, I am dedicated to empowering professionals and organizations to unlock the full potential of cloud computing.
 
 content:
-  - title: Technical Skills
-    layout: text
-    content: |
-      **Cloud Computing**: Proficient in AWS, Azure, and Google Cloud Platform.
-      
-      **DevOps & CI/CD**: Expertise in Jenkins, GitLab CI, and GitHub Actions.
-      
-      **Infrastructure as Code**: Advanced knowledge in HashiCorp Terraform.
-      
-      **Configuration Management**: Experienced with Ansible, Chef, and Puppet.
-      
-      **Security & Compliance**: Expert in security practices and HashiCorp Vault.
-      
-      **Monitoring & Operations**: Skilled in Prometheus, Grafana, and ELK Stack.
-      
-      **Scripting & Automation**: Proficient in Bash, Python, and PowerShell.
-      
-      **Microservices Architecture**: Knowledgeable in Docker and Kubernetes.
-      
-      **Linux System Administration**: Strong foundation in Linux administration.
-
+  - title: Skills
+    layout: list
+    content:
+      - layout: top-middle
+        quote: 
+          
   - title: Projects
     layout: list
     content:
@@ -66,13 +58,24 @@ content:
     layout: list
     content:
       - layout: left
-        title: ECS
-        link: https://ecs.co.uk
-        sub_title: Delivery Consultants
-        caption: July 2016 - Present
-        quote: "Solving 21st century problems by digging holes and making game-changing products like the *not a flamethrower*"
+        title: WALT Labs
+        sub_title: Head of Engineering, EMEA
+        caption: January 2023 - Present
         description: |
-          Every company needs its networks properly administered and The Boring Company is no exception. Digging holes is hard, and I play my part in making sure the whole company stays connected. I lead a team of 5 people and enjoy driving the company to try new technologies.
+
+      - layout: left
+        title: Aqua Security
+        sub_title: DevSecOps Engineer
+        caption: July 2021 - December 2022
+        description: |
+          Leading cloud-native security solutions, focusing on application protection across the entire lifecycle. Contributed to securing supply chains, cloud infrastructure, and running workloads in diverse environments.
+
+      - layout: left
+        title: Global Logic Consulting ( Formally ECS )
+        sub_title: Delivery Consultant
+        caption: July 2016 - July 2021
+        description: |
+          A digital product engineering company integrating experience design with complex engineering, facilitating clients' transition into digital businesses.
 
       - layout: left
         title: QA Consulting
@@ -86,14 +89,12 @@ content:
       - layout: left
         title: University of South Wales
         caption: 2011 - 2015
-        sub_title: BSc Computer Forensic and Security
+        sub_title: BSc Hons Computer Forensic and Security
 
   - title: A Little More About Me
     layout: text
     content: |
       Alongside my interests in software engineering, some of my other interests and hobbies are:
-      - Rock climbing
-      - Gaming
 
 # Footer
 footer_show_references: true

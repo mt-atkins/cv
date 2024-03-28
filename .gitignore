@@ -4,3 +4,7 @@
 _site
 Gemfile.lock
 *.code-workspace
+_data
+_includes
+vendor
+assets
