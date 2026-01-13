@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.name }}</title>
+  <meta name="description" content="{{ site.about_content | strip_html | truncatewords: 50 }}">
+
+  <!-- Favicon -->
+  {% if site.favicon %}
+  <link rel="shortcut icon" type="image/x-icon" href="{{ site.favicon | relative_url }}">
+  {% endif %}
+
+  <!-- Theme CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/sproogen/modern-resume-theme@3.0.0/assets/css/main.css">
+
+  <!-- Agentic AI Custom Styles -->
+  <link rel="stylesheet" href="{{ '/assets/css/agentic-ai.css' | relative_url }}">
+
+  <!-- Google Fonts for better typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  {% seo %}
+</head>
+
+<body class="{% if site.darkmode == true %}dark-mode{% endif %}">
+  <!-- Neural Network Background -->
+  {% include neural-network.html %}
+
+  <div class="wrapper">
+    <!-- Header Section -->
+    <header class="site-header">
+      <div class="header-content">
+        <div class="profile">
+          {% if site.about_profile_image %}
+          <div class="profile-image">
+            <img src="{{ site.about_profile_image | relative_url }}" alt="{{ site.name }}">
+          </div>
+          {% endif %}
+
+          <div class="profile-info">
+            <h1 class="name">{{ site.name }}</h1>
+            <h2 class="title">{{ site.title }}</h2>
+
+            <!-- Social Links -->
+            <div class="social-links">
+              {% if site.email %}
+              <a href="mailto:{{ site.email }}" title="Email"><i class="fas fa-envelope"></i></a>
+              {% endif %}
+              {% if site.website %}
+              <a href="https://{{ site.website }}" target="_blank" title="Website"><i class="fas fa-globe"></i></a>
+              {% endif %}
+              {% if site.github_username %}
+              <a href="https://github.com/{{ site.github_username }}" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+              {% endif %}
+              {% if site.linkedin_username %}
+              <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+              {% endif %}
+              {% if site.youtube_username %}
+              <a href="https://youtube.com/@{{ site.youtube_username }}" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+              {% endif %}
+              {% if site.instagram_username %}
+              <a href="https://instagram.com/{{ site.instagram_username }}" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+              {% endif %}
+              {% for link in site.additional_links %}
+              <a href="{{ link.url }}" target="_blank" title="{{ link.title }}"><i class="{{ link.icon }}"></i></a>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="site-main">
+      <!-- About Section -->
+      {% if site.about_content %}
+      <section class="about-section">
+        <h2 class="section-heading"><i class="fas fa-user"></i> About</h2>
+        <div class="about-content">
+          {{ site.about_content | markdownify }}
+        </div>
+      </section>
+      {% endif %}
+
+      <!-- Content Sections from Config -->
+      {% for section in site.content %}
+      <section class="content-section">
+        <h2 class="section-heading">
+          {% case section.title %}
+            {% when 'Skills' %}
+              <i class="fas fa-cogs"></i>
+            {% when 'Experience' %}
+              <i class="fas fa-briefcase"></i>
+            {% when 'Education' %}
+              <i class="fas fa-graduation-cap"></i>
+            {% when 'Projects' %}
+              <i class="fas fa-code"></i>
+            {% else %}
+              <i class="fas fa-star"></i>
+          {% endcase %}
+          {{ section.title }}
+        </h2>
+
+        {% if section.layout == 'list' %}
+        <div class="content-list">
+          {% for item in section.content %}
+          <div class="content-item {% if item.layout %}layout-{{ item.layout }}{% endif %}">
+            {% if item.title %}
+            <div class="item-header">
+              <h3 class="item-title">
+                {% if item.link %}<a href="{{ item.link }}" target="_blank">{{ item.title }}</a>{% else %}{{ item.title }}{% endif %}
+              </h3>
+              {% if item.sub_title %}<span class="item-subtitle">{{ item.sub_title }}</span>{% endif %}
+              {% if item.caption %}<span class="item-caption">{{ item.caption }}</span>{% endif %}
+            </div>
+            {% endif %}
+            {% if item.quote %}<blockquote class="item-quote">{{ item.quote }}</blockquote>{% endif %}
+            {% if item.description %}<div class="item-description">{{ item.description | markdownify }}</div>{% endif %}
+          </div>
+          {% endfor %}
+        </div>
+        {% elsif section.layout == 'text' %}
+        <div class="content-text">
+          {{ section.content | markdownify }}
+        </div>
+        {% endif %}
+      </section>
+      {% endfor %}
+
+      <!-- Page Content -->
+      {{ content }}
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      {% if site.footer_show_references %}
+      <p class="references">References available upon request</p>
+      {% endif %}
+      <p class="powered-by">
+        Powered by <a href="https://github.com/sproogen/modern-resume-theme" target="_blank">Modern Resume Theme</a>
+        | Enhanced with Agentic AI Experience
+      </p>
+    </footer>
+  </div>
+
+  <!-- AI Assistant Widget -->
+  {% include ai-assistant.html %}
+
+  <!-- Agentic AI JavaScript -->
+  <script src="{{ '/assets/js/agentic-ai.js' | relative_url }}"></script>
+
+  <style>
+    /* Additional inline styles for theme integration */
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    .wrapper {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .site-header {
+      margin-bottom: 40px;
+    }
+
+    .header-content {
+      text-align: center;
+    }
+
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .profile-image {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 4px solid var(--ai-primary, #00d4ff);
+      box-shadow: 0 0 40px rgba(0, 212, 255, 0.3);
+    }
+
+    .profile-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .profile-info {
+      text-align: center;
+    }
+
+    .name {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin: 0 0 8px;
+      background: linear-gradient(135deg, #00d4ff, #7c3aed);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .title {
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.7);
+      margin: 0 0 20px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+    }
+
+    .social-links a {
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 1.1rem;
+      transition: all 0.3s ease;
+    }
+
+    .social-links a:hover {
+      background: rgba(0, 212, 255, 0.1);
+      border-color: rgba(0, 212, 255, 0.3);
+      color: var(--ai-primary, #00d4ff);
+      transform: translateY(-3px);
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 40px 0 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid rgba(0, 212, 255, 0.2);
+    }
+
+    .section-heading i {
+      color: var(--ai-primary, #00d4ff);
+    }
+
+    .about-content {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .content-item {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 16px;
+      transition: all 0.3s ease;
+    }
+
+    .content-item:hover {
+      background: rgba(0, 212, 255, 0.03);
+      border-color: rgba(0, 212, 255, 0.15);
+      transform: translateX(4px);
+    }
+
+    .item-header {
+      margin-bottom: 12px;
+    }
+
+    .item-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin: 0 0 4px;
+    }
+
+    .item-title a {
+      color: var(--ai-primary, #00d4ff);
+      text-decoration: none;
+    }
+
+    .item-title a:hover {
+      text-decoration: underline;
+    }
+
+    .item-subtitle {
+      display: block;
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 4px;
+    }
+
+    .item-caption {
+      display: block;
+      font-size: 0.9rem;
+      color: rgba(0, 212, 255, 0.7);
+      font-weight: 500;
+    }
+
+    .item-quote {
+      font-style: italic;
+      color: rgba(255, 255, 255, 0.6);
+      border-left: 3px solid var(--ai-primary, #00d4ff);
+      padding-left: 16px;
+      margin: 12px 0;
+    }
+
+    .item-description {
+      color: rgba(255, 255, 255, 0.75);
+      line-height: 1.7;
+    }
+
+    .site-footer {
+      margin-top: 60px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: center;
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.9rem;
+    }
+
+    .site-footer a {
+      color: var(--ai-primary, #00d4ff);
+      text-decoration: none;
+    }
+
+    .site-footer a:hover {
+      text-decoration: underline;
+    }
+
+    .references {
+      margin-bottom: 8px;
+    }
+
+    /* Dark mode background */
+    body.dark-mode {
+      background: linear-gradient(135deg, #0f172a 0%, #020617 100%);
+      color: #fff;
+    }
+
+    @media (min-width: 768px) {
+      .profile {
+        flex-direction: row;
+        text-align: left;
+      }
+
+      .profile-info {
+        text-align: left;
+      }
+
+      .social-links {
+        justify-content: flex-start;
+      }
+    }
+  </style>
+</body>
+</html>

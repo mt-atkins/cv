@@ -7,7 +7,7 @@ version: 2
 
 # Personal info
 name: Morgan Thomas Atkins
-title: Cloud Engineering Evangelist
+title: Cloud Engineering Evangelist | Agentic AI Pioneer
 email: morgan.atkins@mea-tech.co.uk
 website: mea-tech.co.uk
 
@@ -29,30 +29,76 @@ additional_links:
 # About Section
 about_profile_image: images/IMG_6274.png
 about_content: |
-    Hello, I'm Morgan Thomas Atkins, a dedicated Cloud Engineering Evangelist with a deep-seated passion for guiding enterprises through their digital transformation journeys. My expertise lies at the intersection of cloud computing, containerization, and DevOps practices, where I excel in architecting Container and Secret Management Platforms that propel organizations into the future.
+    Hello, I'm Morgan Thomas Atkins, a dedicated **Cloud Engineering Evangelist** with a deep-seated passion for guiding enterprises through their digital transformation journeys. My expertise lies at the intersection of **cloud computing, containerization, DevOps practices, and Agentic AI**, where I excel in architecting autonomous, self-healing infrastructure platforms that propel organizations into the future.
 
-    Certified in Docker and with extensive experience in Kubernetes and Rancher, I have a proven track record of designing and deploying scalable, secure, and resilient infrastructure solutions that streamline operations and foster innovation. My skills with HashiCorp Vault and Terraform further empower me to ensure that these solutions are not only efficient but also secure and compliant with the highest industry standards.
-    
-    My role goes beyond the technical; as an evangelist, I thrive on sharing knowledge, best practices, and the transformative potential of cloud engineering. Through workshops, seminars, and one-on-one mentoring, I've inspired teams and organizations to embrace cloud technologies, thereby accelerating their digital transformation initiatives.
-    
-    I believe in the power of collaboration and the importance of fostering a culture where continuous learning, innovation, and improvement are part of the daily routine. By bridging the gap between technical possibilities and business objectives, I help organizations leverage cloud technology to achieve their strategic goals.
-    
-    My commitment to the cloud engineering community is driven by a desire to see others succeed. Whether it's through leading edge solutions, thought leadership, or hands-on guidance, I am dedicated to empowering professionals and organizations to unlock the full potential of cloud computing.
+    Certified in Docker and with extensive experience in Kubernetes and Rancher, I have a proven track record of designing and deploying scalable, secure, and resilient infrastructure solutions. My skills with HashiCorp Vault, Terraform, and emerging AI-driven automation empower me to build systems that are not only efficient but also intelligent and adaptive.
+
+    I'm particularly excited about the rise of **Agentic AI** in cloud operations - autonomous AI systems that can plan, execute, and learn from infrastructure tasks. This paradigm shift enables self-healing systems, intelligent auto-scaling, and proactive incident response that transforms how we think about DevOps.
+
+    My role goes beyond the technical; as an evangelist, I thrive on sharing knowledge, best practices, and the transformative potential of cloud engineering combined with AI innovation. Through workshops, seminars, and hands-on mentoring, I've inspired teams to embrace cutting-edge technologies.
+
+    **Try the AI assistant** in the bottom right corner to learn more about my experience!
 
 content:
+  - title: Agentic AI Focus
+    layout: list
+    content:
+      - layout: left
+        title: Autonomous Cloud Operations
+        sub_title: Building Self-Healing Infrastructure
+        description: |
+          Leveraging AI agents to create infrastructure that monitors, diagnoses, and heals itself. From intelligent auto-scaling to predictive maintenance, I'm pushing the boundaries of what autonomous systems can achieve in cloud environments.
+
+      - layout: left
+        title: AI-Driven DevOps
+        sub_title: The Future of Operations
+        description: |
+          Implementing AI-powered CI/CD pipelines that can optimize build processes, predict failures before they occur, and automatically remediate common issues. This represents the next evolution beyond traditional DevOps.
+
+      - layout: left
+        title: Multi-Agent Orchestration
+        sub_title: Coordinated Intelligence
+        description: |
+          Designing systems where multiple AI agents work together across cloud platforms - one agent handles security, another manages scaling, while a third optimizes costs. True collaborative autonomy.
+
   - title: Skills
     layout: list
     content:
       - layout: top-middle
-        quote: 
-          
+        title: Core Competencies
+        description: |
+          **Cloud Platforms:** AWS, Azure, Google Cloud Platform
+
+          **Container Orchestration:** Kubernetes, Docker, Rancher, Helm
+
+          **Infrastructure as Code:** Terraform, Pulumi, CloudFormation
+
+          **CI/CD:** GitHub Actions, GitLab CI, Jenkins, ArgoCD
+
+          **Security:** HashiCorp Vault, DevSecOps, Zero Trust Architecture
+
+          **AI/ML Ops:** Agent frameworks, LLM integration, Autonomous systems
+
   - title: Projects
     layout: list
     content:
-      - layout: top-middle
-        title: Super awesome project
+      - layout: left
+        title: Agentic Infrastructure Platform
         link: https://github.com/morgantatkins
-        quote: "If You're Not Embarrassed By The First Version Of Your Product, You’ve Launched Too Late"
+        description: |
+          An autonomous infrastructure management platform powered by AI agents. Features self-healing capabilities, intelligent resource allocation, and predictive maintenance for cloud-native applications.
+
+      - layout: left
+        title: AI-Powered Security Scanner
+        link: https://github.com/morgantatkins
+        description: |
+          DevSecOps tool leveraging AI to identify vulnerabilities, suggest fixes, and automatically patch common security issues in containerized applications. Integrates with major CI/CD platforms.
+
+      - layout: left
+        title: Multi-Cloud Cost Optimizer
+        link: https://github.com/morgantatkins
+        description: |
+          Agent-based system that continuously analyzes cloud spending across AWS, Azure, and GCP, providing actionable recommendations and automated rightsizing of resources.
 
   - title: Experience
     layout: list
@@ -94,7 +140,14 @@ content:
   - title: A Little More About Me
     layout: text
     content: |
-      Alongside my interests in software engineering, some of my other interests and hobbies are:
+      Beyond cloud engineering and AI, I'm passionate about:
+
+      - **Speaking & Evangelism** - Sharing knowledge at conferences and meetups about the future of cloud operations
+      - **Open Source** - Contributing to projects that make DevOps and AI more accessible
+      - **Continuous Learning** - Always exploring the latest in AI agents, LLMs, and autonomous systems
+      - **Mentoring** - Helping the next generation of engineers embrace cloud-native technologies
+
+      I believe we're at an inflection point where AI will fundamentally transform how we build and operate software systems. Let's build that future together!
 
 # Footer
 footer_show_references: true
